@@ -5,49 +5,157 @@
     <title>Modals - Simple modal dialogue windows</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- stylesheets -->
-    <link rel="stylesheet" href="modals.css" type="text/css" />
+    <link rel="stylesheet" href="kraken.css" type="text/css" />
 
-    <!-- HTML5 Shim for IE -->
-    <!--[if IE]>
+    <!-- HTML5 Shim for IE 6-8 -->
+    <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/ico" href="img/favicon.ico">
+
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144.png">
+
+    <!-- MS Homescreen Icons -->
+    <meta name="msapplication-TileColor" content="#0088cc">
+    <meta name="msapplication-TileImage" content="img/ms-touch-icon.png">
 </head>
 
 <body>
-	<section class="container">
+	<section class="space-bottom bg-gray">
+	    <article class="container text-center">
 
-	    <h1 style="text-align: center; font-size: 3em;">Pop</h1>
-	    <p style="text-align: center; font-size: 1.5em;">Simple modal dialogue windows.</p>
+            <h1 class="text-taller no-space-bottom"><i class="icon-logo"></i> Modals</h1>
+            <p class="text-tall text-muted">Simple modal dialogue windows.</p>
 
-        <p><button class="btn modal-toggle" data-target="#modal1">Modal</button> <button class="btn modal-toggle" data-target="#modal2">Modal Medium</button> <button class="btn modal-toggle" data-target="#modal3">Modal Small</button></p>
+	        <p><a class="btn btn-blue btn-jumbo" href="https://github.com/cferdinandi/modals/archive/master.zip">Download Modals</a></p>
 
-        <div class="modal" id="modal1">
-            <a class="modal-close close">x</a>
-            <h3>Modal</h3>
-            <p>Modal content</p>
-            <button class="btn modal-close">Close</button>
-        </div>
+	        <p>
+	            <span class="text-small">
+	                <a href="https://github.com/cferdinandi/modals"><i class="icon-github"></i> GitHub Project</a>
+	                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	                <a href="#more"><i class="icon-docs"></i> Getting Started</a>
+                </span>
+            </p>
 
-        <div class="modal modal-medium" id="modal2">
-            <a class="modal-close close">x</a>
-            <h3>Modal Medium</h3>
-            <p>Modal content</p>
-            <button class="btn modal-close">Close</button>
-        </div>
+        </article>
+    </section>
 
-        <div class="modal modal-small" id="modal3">
-            <a class="modal-close close">x</a>
-            <h3>Modal Small</h3>
-            <p>Modal content</p>
-            <button class="btn modal-close">Close</button>
-        </div>
+	<section class="space-bottom">
+	    <article class="container">
 
+
+	        <h1 class="text-center" id="more">How It Works</h1>
+
+	        <p>Turn any link into a modal toggle by adding the <code>.modal-toggle</code> class. You also need to add a <code>data-target</code> attribute that matches the ID of the modal you want to open.</p>
+
+            <p><a class="btn modal-toggle" data-target="#modal" href="#">Toggle Modal</a></p>
+
+            <div class="modal" id="modal">
+                <a class="modal-close close">x</a>
+                <h3>Modal</h3>
+                <p>Modal content</p>
+                <button class="btn modal-close">Close</button>
+            </div>
+
+            <pre>&lt;a class="modal-toggle" data-target="#modal" href="#"&gt;Toggle Modal&lt;/a&gt;
+
+&lt;div class="modal" id="modal"&gt;
+    &lt;a class="modal-close close"&gt;x&lt;/a&gt;
+    &lt;h3&gt;Modal&lt;/h3&gt;
+    &lt;p&gt;Modal content&lt;/p&gt;
+    &lt;button class="btn modal-close"&gt;Close&lt;/button&gt;
+&lt;/div&gt;</pre>
+
+            <hr>
+
+
+            <h1 class="text-center">Different Sizes</h1>
+
+            <p>Modals come in three different sizes: standard, medium, and small.</p>
+
+            <p><a class="btn modal-toggle" data-target="#modal-medium" href="#">Medium Modal</a> <a class="btn modal-toggle" data-target="#modal-small" href="#">Small Modal</a></p>
+
+            <div class="modal modal-medium" id="modal-medium">
+                <a class="modal-close close">x</a>
+                <h3>Modal Medium</h3>
+                <p>Modal content</p>
+                <button class="btn modal-close">Close</button>
+            </div>
+
+            <div class="modal modal-small" id="modal-small">
+                <a class="modal-close close">x</a>
+                <h3>Modal Small</h3>
+                <p>Modal content</p>
+                <button class="btn modal-close">Close</button>
+            </div>
+
+            <pre>&lt;a class="btn modal-toggle" data-target="#modal-medium" href="#"&gt;Medium Modal&lt;/a&gt;
+&lt;a class="btn modal-toggle" data-target="#modal-small" href="#"&gt;Small Modal&lt;/a&gt;
+
+&lt;div class="modal modal-medium" id="modal-medium"&gt;
+    &lt;a class="modal-close close"&gt;x&lt;/a&gt;
+    &lt;h3&gt;Modal Medium&lt;/h3&gt;
+    &lt;p&gt;Modal content&lt;/p&gt;
+    &lt;button class="btn modal-close"&gt;Close&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="modal modal-small" id="modal-small"&gt;
+    &lt;a class="modal-close close"&gt;x&lt;/a&gt;
+    &lt;h3&gt;Modal Small&lt;/h3&gt;
+    &lt;p&gt;Modal content&lt;/p&gt;
+    &lt;button class="btn modal-close"&gt;Close&lt;/button&gt;
+&lt;/div&gt;</pre>
+
+            <hr>
+
+
+            <h1 class="text-center">Modal Accessibility</h1>
+
+            <p>For better accessibility, there are a few different ways to dismiss modals.</p>
+
+            <p>Adding a <code>.modal-close</code> tag to any button or link turns it into a modal dismiss link. Clicking anywhere outside the modal or pressing the escape key will close the modal, too.
+
+            <hr>
+
+
+            <h1 class="text-center">Backup URLs</h1>
+
+            <p>Always specify a functioning link as a backup for modals.</p>
+
+            <p>If a browser doesn't support JavaScript, the modal dialogue won't work. Specifying a backup URL ensures that people can always access your content, even on less capable browsers.</p>
+
+            <p>When JavaScript is supported, Modals will prevent the backup URL from redirecting people away from the current page.</p>
+
+            <hr>
+
+
+            <h1 class="text-center">Requires jQuery</h1>
+
+            <p>Modals requires <a href="http://jquery.com/">jQuery</a>.</p>
+
+        </article>
 	</section>
+
+	<footer class="bg-gray">
+        <article class="container">
+
+            <p class="text-small text-muted text-center">Built by <a href="http://gomakethings.com">Chris Ferdinandi</a>. Licensed under <a href="http://www.wtfpl.net/">WTFPL</a>.</p>
+
+            <p class="text-small text-muted text-center">Modals is an add-on for <a href="http://cferdinandi.github.com/kraken/">Kraken</a>, a lightweight, mobile-first boilerplate for front-end web developers. It works great as a standalone product, too.</p>
+
+        </article>
+	</footer>
 
 
     <!-- Javascript -->
     <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
-    <script type='text/javascript' src='modals.js'></script>
+    <script type='text/javascript' src='js/kraken.js'></script>
 
 </body>
 </html>
