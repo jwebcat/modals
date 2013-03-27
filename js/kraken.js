@@ -88,7 +88,7 @@ $(function () {
     });
 
     // When click outside of modal
-    $('body').on('click' || 'ontouchstart' in window || 'ontouch' in window,'.modal-bg',function() {
+    $('body').on('click touchstart','.modal-bg',function() {
         $('.modal').removeClass('active'); // Hide modal.
         $('.modal-bg').remove(); // Remove modal background.
     });
