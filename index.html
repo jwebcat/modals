@@ -82,8 +82,8 @@
                 <button class="btn modal-close">Close</button>
             </div>
 
-            <pre>&lt;a class="btn modal-toggle" data-target="#modal-medium" href="#"&gt;Medium Modal&lt;/a&gt;
-&lt;a class="btn modal-toggle" data-target="#modal-small" href="#"&gt;Small Modal&lt;/a&gt;
+            <pre>&lt;a class="modal-toggle" data-target="#modal-medium" href="#"&gt;Medium Modal&lt;/a&gt;
+&lt;a class="modal-toggle" data-target="#modal-small" href="#"&gt;Small Modal&lt;/a&gt;
 
 &lt;div class="modal modal-medium" id="modal-medium"&gt;
     &lt;a class="modal-close close"&gt;x&lt;/a&gt;
@@ -119,12 +119,16 @@
 
             <p>When JavaScript is supported, Modals will prevent the backup URL from redirecting people away from the current page.</p>
 
+            <pre>&lt;a class="modal-toggle" data-target="#modal" href="http://backup-url.com"&gt;Modal Togglel&lt;/a&gt;</pre>
+
             <hr>
 
 
-            <h1 class="text-center">Requires jQuery</h1>
+            <h1 class="text-center">Browser Support</h1>
 
             <p>Modals requires <a href="http://jquery.com/">jQuery</a>.</p>
+
+            <p>It works in all modern browsers, and IE 7 and above. Because IE 8 and lower do not support media queries, all three modal sizes will look the same in those browsers. <a href="http://gomakethings.com/mobile-first-and-internet-explorer/">Learn how to add media query support to with older versions of IE.</a></p>
 
         </article>
 	</section>
